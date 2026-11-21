@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:#F5F5F7;color:#1d1d1f;font-family:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#1E3A8A;text-underline-offset:3px}
+:focus-visible{outline:3px solid #E9B355;outline-offset:3px;border-radius:6px}
+.top{background:#0A0F1F;color:#fff}
+.top .in{max-width:820px;margin:0 auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Inter Tight","Inter",sans-serif;font-weight:800;font-size:19px;letter-spacing:-.02em;color:#fff;text-decoration:none}
+.brand i{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,#F8DA96,#E9B355);display:block;box-shadow:0 0 18px rgba(126,151,214,.7)}
+.back{color:#F2C46D;font-weight:600;font-size:16px;text-decoration:none;padding:10px 0}
+.back:hover{text-decoration:underline}
+main{max-width:820px;margin:0 auto;padding:48px 24px 80px}
+h1{font-family:"Inter Tight","Inter",sans-serif;font-size:40px;line-height:1.1;letter-spacing:-.03em;margin:0 0 10px}
+.date{color:#6e6e73;font-size:15px;margin:0 0 32px}
+h2{font-family:"Inter Tight","Inter",sans-serif;font-size:24px;letter-spacing:-.02em;margin:40px 0 10px}
+p,li{max-width:70ch}
+ul{padding-left:22px}
+li{margin:6px 0}
+.card{background:#fff;border-radius:20px;padding:22px 24px;margin:20px 0;border:1px solid #e5e5ea}
+.card b{display:block;margin-bottom:4px}
+footer{max-width:820px;margin:0 auto;padding:0 24px 48px;color:#6e6e73;font-size:14px}
+@media (max-width:600px){h1{font-size:30px}body{font-size:17px}main{padding-top:32px}}

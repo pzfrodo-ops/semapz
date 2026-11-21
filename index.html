@@ -3,8 +3,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SEMA AI</title>
+<title>SEMA AI. Нейросети для учёта, документов, фото и сайтов</title>
 <meta name="description" content="Помогаю разобраться в нейросетях и сделать ваш продукт интереснее: учёт склада и зарплаты, таблицы и базы данных, фото, видео, сайты под ключ, реклама и 3D-модели. Конфиденциально, на связи 24/7.">
+<link rel="canonical" href="https://semapz.ru/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#0A0F1F">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SEMA AI">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://semapz.ru/">
+<meta property="og:title" content="Вы объясняете задачу, я переведу её на язык нейросетей">
+<meta property="og:description" content="Учёт без бумаги, документы по ГОСТ, фото, видео, сайты и реклама. Бесплатно разберу задачу и покажу пример на ваших данных.">
+<meta property="og:image" content="https://semapz.ru/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SEMA AI. Вы объясняете задачу, я переведу её на язык нейросетей">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
@@ -435,6 +451,21 @@ h1,h2,.ticks b,.final h2{font-family:var(--display);font-weight:700;letter-spaci
 .copy{font-size:14px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer}
 footer{border-top:1px solid rgba(255,255,255,.08);padding:28px 0 40px;color:#86868b;font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .legal{display:flex;flex-wrap:wrap;gap:6px 18px;width:100%;order:3}
+footer .legal a,footer .legal button{color:#a1a1a6;font:inherit;font-size:14px;background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+footer .legal a:hover,footer .legal button:hover{color:#F2C46D}
+.form{color-scheme:light}
+.chk.consent{align-items:flex-start;font-weight:500;line-height:1.4}
+.chk.consent input{flex:none;margin-top:1px}
+.chk.consent a{color:#1E3A8A;text-decoration:underline;text-underline-offset:3px}
+.ck{position:fixed;left:16px;bottom:16px;z-index:80;max-width:440px;background:#121a33;color:#e5e9f5;border:1px solid rgba(242,196,109,.35);border-radius:22px;padding:18px 20px;box-shadow:0 18px 50px rgba(0,0,0,.45);font-size:15px;line-height:1.45}
+.ck p{margin:0}
+.ck a{color:#F2C46D;text-decoration:underline;text-underline-offset:3px}
+.ck-btns{display:flex;gap:10px;align-items:center;margin-top:14px}
+.ck .btn{padding:12px 22px;font-size:15px}
+.ck-no{background:none;border:0;color:#c7cde0;font:inherit;font-size:15px;font-weight:600;padding:12px 10px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;min-height:44px}
+body.ck-open .mbar{display:none}
+@media (max-width:680px){.ck{left:10px;right:10px;bottom:10px;max-width:none}}
 
 .mbar{display:none}
 @media (max-width:680px){
@@ -950,12 +981,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           </div>
           <button type="button" class="more-btn" id="moreOpts" aria-expanded="false" aria-controls="svcOpts">Показать все</button>
           <label class="lb" for="task"><em>2</em>Опишите задачу как можно подробнее</label>
-          <textarea id="task" placeholder="Например: веду склад запчастей в тетради, хочу видеть остатки и вовремя заказывать"></textarea>
+          <textarea id="task" class="ym-disable-keys" placeholder="Например: веду склад запчастей в тетради, хочу видеть остатки и вовремя заказывать"></textarea>
           <div class="two">
-            <div><label class="lb" for="name"><em>3</em>Как к вам обращаться</label><input type="text" id="name" autocomplete="name" placeholder="Имя или ФИО"></div>
-            <div><label class="lb" for="when"><em>4</em>Крайний срок</label><input type="text" id="when" placeholder="Например: до пятницы"></div>
+            <div><label class="lb" for="name"><em>3</em>Как к вам обращаться</label><input type="text" id="name" class="ym-disable-keys" autocomplete="name" placeholder="Имя или ФИО"></div>
+            <div><label class="lb" for="when"><em>4</em>Крайний срок</label><input type="text" id="when" class="ym-disable-keys" placeholder="Например: до пятницы"></div>
           </div>
           <label class="chk"><input type="checkbox" id="nda"> Нужен договор о неразглашении</label>
+          <label class="chk consent"><input type="checkbox" id="agree"> <span>Даю <a href="soglasie.html" target="_blank">согласие на обработку персональных данных</a> и ознакомлен с <a href="policy.html" target="_blank">политикой</a></span></label>
           <p class="err" id="err" role="alert"></p>
           <button class="btn btn-dark" type="submit">Оформить запрос</button>
           <div class="result" id="result" hidden>
@@ -1057,8 +1089,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       </div>
 </dialog>
 
+<div class="ck" id="ck" role="region" aria-label="Cookie" hidden>
+  <p>Сайт использует cookie и Яндекс Метрику, чтобы считать посещения. Нажимая «Принять», вы соглашаетесь на обработку этих данных по <a href="policy.html">политике</a>.</p>
+  <div class="ck-btns"><button type="button" class="btn btn-light" id="ckYes">Принять</button><button type="button" class="ck-no" id="ckNo">Отказаться</button></div>
+</div>
 <footer>
-  <div class="wrap"><span>SEMA AI. Семён Поздняков, самозанятый. Удалённо по всей России.</span><span>Telegram @semapz&emsp;<a href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile" style="text-decoration:underline;text-underline-offset:3px">Авито</a></span></div>
+  <div class="wrap"><span>SEMA AI. Семён Поздняков, самозанятый. Удалённо по всей России.</span><span class="legal"><a href="policy.html">Политика конфиденциальности</a><a href="soglasie.html">Согласие на обработку данных</a><button type="button" id="ckSettings">Настройки cookie</button></span><span>Telegram @semapz&emsp;<a href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile" style="text-decoration:underline;text-underline-offset:3px">Авито</a></span></div>
 </footer>
 
 <script>
@@ -1191,7 +1227,9 @@ document.querySelectorAll('.order-btn').forEach(function(b){
     var svcs=[].slice.call(document.querySelectorAll('#svcOpts input:checked')).map(function(i){return i.value;});
     var task=document.getElementById('task').value.trim();
     if(!svcs.length&&!task){err.textContent='Выберите услугу или опишите задачу хотя бы в двух словах.';return;}
+    if(!document.getElementById('agree').checked){err.textContent='Отметьте согласие на обработку данных, без него я не смогу ответить на запрос.';document.getElementById('agree').focus();return;}
     err.textContent='';
+    goal('order_form');
     var name=document.getElementById('name').value.trim(),when=document.getElementById('when').value.trim(),nda=document.getElementById('nda').checked;
     var lines=['Здравствуйте! Запрос с сайта SEMA AI.'];
     if(name)lines.push('Меня зовут: '+name);
@@ -1263,6 +1301,38 @@ document.querySelectorAll('.order-btn').forEach(function(b){
 /* copy email */
 document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){var t=b.dataset.copy,o=b.textContent;
   try{navigator.clipboard.writeText(t).then(function(){b.textContent='Скопировано';setTimeout(function(){b.textContent=o;},1800);},function(){b.textContent='Скопируйте вручную';});}catch(e){b.textContent='Скопируйте вручную';}});});
+</script>
+<script>
+/* cookie consent -> Яндекс Метрика грузится только после «Принять» */
+var YM_ID=114486592;
+function goal(name){try{if(window.ym)ym(YM_ID,'reachGoal',name);}catch(e){}}
+(function(){
+  var ck=document.getElementById('ck'),KEY='sema_ck';
+  function get(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+  function set(v){try{localStorage.setItem(KEY,v);}catch(e){}}
+  function loadYM(){
+    if(window.ym)return;
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+    for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,'script','https://mc.yandex.ru/metrika/tag.js?id='+YM_ID,'ym');
+    ym(YM_ID,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});
+  }
+  function show(){ck.hidden=false;document.body.classList.add('ck-open');}
+  function hide(){ck.hidden=true;document.body.classList.remove('ck-open');}
+  var v=get();
+  if(v==='yes')loadYM(); else if(v!=='no')show();
+  document.getElementById('ckYes').addEventListener('click',function(){set('yes');hide();loadYM();});
+  document.getElementById('ckNo').addEventListener('click',function(){set('no');hide();});
+  document.getElementById('ckSettings').addEventListener('click',function(){show();document.getElementById('ckYes').focus();});
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+    var h=a.getAttribute('href');
+    if(h.indexOf('t.me/')>-1)goal('telegram');
+    else if(h.indexOf('mailto:')===0)goal('email');
+    else if(h.indexOf('avito.ru')>-1)goal('avito');
+  });
+})();
 </script>
 </body>
 </html>

@@ -21,9 +21,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SEMA AI. Вы объясняете задачу, я переведу её на язык нейросетей">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter+Tight:wght@600;700;800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts.css">
 <style>
 /* Product-launch page: black stages with a living neural field, light stages between.
    The portfolio is a shop window: every service is a product card with its own live mockup. */
@@ -590,6 +589,31 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
   .mini .ico{font-size:17px}
   .mini .ico svg{width:24px;height:24px}
 }
+
+/* v12: плавные переходы, единицы цен */
+.fade{height:220px;margin:0;pointer-events:none}
+.fade-in{background:linear-gradient(180deg,#0A0F1F 0%,#141c33 18%,#2c3550 38%,#5d6680 58%,#a3a9bb 78%,#d6dae4 92%,var(--mist) 100%)}
+.fade-out{background:linear-gradient(180deg,var(--mist) 0%,#d6dae4 8%,#a3a9bb 22%,#5d6680 42%,#2c3550 62%,#141c33 82%,#0A0F1F 100%)}
+.light.shop{padding-top:40px}
+.light.how{padding-bottom:40px}
+.buy b small{display:block;font-size:13px;font-weight:500;letter-spacing:0;color:#6e6e73;margin-top:3px;line-height:1.25}
+@media (max-width:680px){.fade{height:140px}.m-ads{zoom:.74;gap:18px}}
+@media (min-width:681px){.stage{-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}}
+.m-feed{width:206px;padding:7px;border-radius:30px;background:#111317;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 30px 60px rgba(0,0,0,.55);transform:rotate(-3deg)}
+.m-feed .scr{background:#fff;color:#1d1d1f;border-radius:24px;padding:12px 10px 10px;font-family:var(--font)}
+.m-feed .fh{display:flex;align-items:center;gap:7px}
+.m-feed .fh i{width:26px;height:26px;border-radius:50%;background:#111;display:grid;place-items:center;flex:none}
+.m-feed .fh b{display:block;font-size:11px;font-weight:700;line-height:1.1}
+.m-feed .fh span{display:block;font-size:9px;color:#8e8e93}
+.m-feed .fh em{margin-left:auto;font-style:normal;color:#8e8e93;font-size:12px}
+.m-feed .ft{font-size:9.5px;line-height:1.3;margin:7px 0 6px;color:#3a3a3c}
+.m-feed .fi{position:relative;height:104px;border-radius:12px;background:linear-gradient(120deg,#ff5a0a,#ff8a2e);overflow:hidden;padding:10px}
+.m-feed .fi b{display:block;color:#111;font-size:15px;line-height:1.02;font-weight:800;letter-spacing:-.02em}
+.m-feed .fi .pr{display:inline-block;margin-top:7px;background:#111;color:#fff;font-weight:700;font-size:10px;padding:3px 7px;border-radius:6px}
+.m-feed .fi .cn{position:absolute;right:6px;bottom:4px;filter:drop-shadow(0 8px 8px rgba(0,0,0,.3))}
+.m-feed .fl{display:flex;align-items:center;justify-content:space-between;margin-top:7px;font-size:9.5px;color:#3a3a3c}
+.m-feed .fl .go{background:#1E3A8A;color:#fff;font-weight:700;padding:5px 10px;border-radius:8px}
+.m-feed .fr{display:flex;gap:12px;margin-top:8px;padding-top:7px;border-top:1px solid #efeff2;font-size:9.5px;color:#6e6e73}
 </style>
 </head>
 <body>
@@ -658,7 +682,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
       <a href="#order">Заявка</a>
       <a href="#faq">Вопросы</a>
     </nav>
-    <a class="pill" href="https://t.me/semapz">Написать в Telegram</a>
+    <a class="pill" href="mailto:pz.sam@yandex.ru">Написать на почту</a>
   </div>
 </header>
 
@@ -670,14 +694,14 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
       <p class="sub">Помогаю разобраться в нейросетях и сделать ваш продукт интереснее. От учёта склада и зарплаты до фото, видео, сайтов и 3D-моделей.</p>
       <div class="offers"><span class="offer"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#F2C46D"/><path d="M6.5 11.3l3 3 6-6.3" fill="none" stroke="#1a1200" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Бесплатно</b> разберу задачу</span></span><span class="offer"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#F2C46D"/><path d="M6.5 11.3l3 3 6-6.3" fill="none" stroke="#1a1200" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Покажу пример <b>на ваших данных</b></span></span></div>
       <div class="cta-row">
-        <a class="btn btn-light" href="https://t.me/semapz">Написать в Telegram</a>
-        <a class="btn btn-line" href="mailto:pz.sam@yandex.ru">Написать на почту</a>
-        <a class="btn btn-text" href="#shop">Посмотреть услуги</a>
+        <a class="btn btn-light" href="mailto:pz.sam@yandex.ru">Написать на почту</a>
+        <a class="btn btn-line" href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile">Написать на Авито</a>
+        <a class="btn btn-text" href="https://t.me/semapz">Telegram @semapz</a>
       </div>
       <div class="ticks">
-        <div><b>1 час</b><span>Оцениваю задачу, называю цену и срок. Экспресс-задачи быстрее</span></div>
+        <div><b>Ответ за 1 час</b><span>Оценю задачу и сразу назову цену и срок работы. Срочно тоже можно</span></div>
         <div><b>Официально</b><span>Работаю как самозанятый, по договору. Подпишу договор о неразглашении</span></div>
-        <div><b>24/7</b><span>Отвечаю в Telegram даже ночью, если не сплю</span></div>
+        <div><b>24/7</b><span>Отвечаю на почте и на Авито даже ночью, если не сплю</span></div>
       </div>
     </div>
   </section>
@@ -740,10 +764,11 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
   </section>
 
   <!-- SHOWCASE -->
+  <div class="fade fade-in" aria-hidden="true"></div>
   <section class="light shop" id="shop">
     <div class="wrap">
       <h2 class="sec-title rv">Выберите, что сделать</h2>
-      <p class="lede rv">Нажмите <a class="lede-link" href="#order">Заказать</a>, и задача сразу попадёт в заявку.</p>
+      <p class="lede rv">Нажмите <a class="lede-link" href="#order">Заказать</a>, и задача сразу попадёт в заявку. Нужно срочно? Сделаю в первую очередь за +50% к цене.</p>
 
       <div class="pick" role="group" aria-label="Подбор услуги по задаче" id="pick">
         <span class="q">Что у вас сейчас?</span>
@@ -777,7 +802,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <p>Накладные и акты в таблицу или 1С, склад с автозаказом, зарплата по нормо-часам, отчёты и сверки.</p>
             <p class="term">Срок 1–3 недели</p>
             <button class="demo-btn" type="button" id="openDemo">Открыть пример учёта склада, зарплаты и заказов</button>
-            <div class="buy"><b>от 3 000 ₽</b><button class="order-btn" data-svc="Учёт без бумаги">Заказать</button></div>
+            <div class="buy"><b>от 3 000 ₽<small>за один участок учёта</small></b><button class="order-btn" data-svc="Учёт без бумаги">Заказать</button></div>
           </div>
         </article>
         <article data-k="docs text" class="prod rv">
@@ -792,7 +817,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Документы и отчёты</h3>
             <p>Корректура, оформление по ГОСТ, презентации из вашего текста.</p>
             <p class="term">Срок от 2 часов</p>
-            <div class="buy"><b>от 500 ₽</b><button class="order-btn" data-svc="Документы и отчёты">Заказать</button></div>
+            <div class="buy"><b>от 500 ₽<small>за документ до 10 страниц</small></b><button class="order-btn" data-svc="Документы и отчёты">Заказать</button></div>
           </div>
         </article>
         <article data-k="uchet docs" class="prod w2 rv">
@@ -815,7 +840,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Таблицы и базы данных</h3>
             <p>Большие таблицы Excel и Google, базы данных, расчёты и графики. Перенос данных из PDF и сканов.</p>
             <p class="term">Срок 1–3 дня</p>
-            <div class="buy"><b>от 700 ₽</b><button class="order-btn" data-svc="Таблицы и базы данных">Заказать</button></div>
+            <div class="buy"><b>от 700 ₽<small>за таблицу</small></b><button class="order-btn" data-svc="Таблицы и базы данных">Заказать</button></div>
           </div>
         </article>
         <article data-k="site" class="prod rv">
@@ -833,7 +858,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Сайт-визитка</h3>
             <p>Лендинг для мастера или сервиса с услугами, ценами и онлайн-записью.</p>
             <p class="term">Срок 3–7 дней</p>
-            <div class="buy"><b>от 5 000 ₽</b><button class="order-btn" data-svc="Сайт-визитка">Заказать</button></div>
+            <div class="buy"><b>от 5 000 ₽<small>за одностраничный сайт</small></b><button class="order-btn" data-svc="Сайт-визитка">Заказать</button></div>
           </div>
         </article>
         </div>
@@ -843,18 +868,24 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
         <div class="grp-h"><h3>Реклама и соцсети</h3></div>
         <div class="bento">
         <article data-k="mp" class="prod w2 rv">
-          <div class="vis dk" style="background:linear-gradient(180deg,#0b1430 0%,#16203f 62%,#16131f 63%,#0b0b10 100%)">
+          <div class="vis dk" style="background:radial-gradient(120% 120% at 30% 0%,#1E3A8A 0%,#0f1733 45%,#0A0F1F 100%)">
             <div class="m-ads" aria-hidden="true">
-              <div class="m-bb"><div class="lgx"><i><svg width="18" height="18" viewBox="0 0 40 40" color="#fff"><use href="#nk"/></svg></i><span>Северный ключ</span></div><b>Замена масла<br>за 30 минут</b><span class="pr">от 1 900 ₽</span><svg class="cn" width="84" height="118" viewBox="0 0 240 336"><use href="#can"/></svg><span class="ad">ул. Компасная, 7, каждый день 9:00–21:00</span></div>
+              <div class="m-feed"><div class="scr">
+                <div class="fh"><i><svg width="16" height="16" viewBox="0 0 40 40" color="#fff"><use href="#nk"/></svg></i><div><b>Северный ключ</b><span>Реклама</span></div><em>···</em></div>
+                <div class="ft">Масло поменяем за 30 минут, пока вы пьёте кофе</div>
+                <div class="fi"><div class="txt"><b>Замена масла<br>за 30 минут</b><span class="pr">от 1 900 ₽</span></div><svg class="cn" width="62" height="87" viewBox="0 0 240 336"><use href="#can"/></svg></div>
+                <div class="fl"><span>ул. Компасная, 7</span><span class="go">Записаться</span></div>
+                <div class="fr"><span>♥ 248</span><span>💬 31</span><span>↗ 12</span></div>
+              </div></div>
               <div class="m-mp"><div class="ph"><span class="sale">−15%</span><svg width="96" height="134" viewBox="0 0 240 336"><use href="#can"/></svg><div class="ig"><span>Синтетика</span><span>API SP</span><span>Пуск до −35 °C</span></div><div class="vol">4 л</div></div><div class="p">2 950 ₽</div><div class="t">Масло моторное 5W‑30, синтетическое, 4 л</div><div class="bt">В корзину</div></div>
             </div>
             <span class="tag-ex">пример</span>
           </div>
           <div class="info">
             <h3>Реклама и карточки товара</h3>
-            <p>Карточки для маркетплейсов, билборды, стенды и баннеры в едином стиле вашего бренда.</p>
+            <p>Карточки для маркетплейсов, реклама в соцсетях, баннеры и вывески в едином стиле вашего бренда.</p>
             <p class="term">Срок 1–3 дня</p>
-            <div class="buy"><b>от 1 000 ₽</b><button class="order-btn" data-svc="Реклама и карточки товара">Заказать</button></div>
+            <div class="buy"><b>от 1 000 ₽<small>за макет или карточку</small></b><button class="order-btn" data-svc="Реклама и карточки товара">Заказать</button></div>
           </div>
         </article>
         <article data-k="mp smm photo" class="prod rv">
@@ -866,7 +897,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Обработка фото</h3>
             <p>Свет и цвет, удаление шума, ретушь, ровный кадр, белый фон для товара.</p>
             <p class="term">Делаю в тот же день</p>
-            <div class="buy"><b>от 100 ₽</b><button class="order-btn" data-svc="Обработка фото">Заказать</button></div>
+            <div class="buy"><b>от 100 ₽<small>за фото</small></b><button class="order-btn" data-svc="Обработка фото">Заказать</button></div>
           </div>
         </article>
         <article data-k="smm mp video clips" class="prod rv">
@@ -877,7 +908,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Монтаж видео</h3>
             <p>Ролики для Reels, Shorts и рекламы. Титры, субтитры, музыка.</p>
             <p class="term">Срок 1–3 дня</p>
-            <div class="buy"><b>от 800 ₽</b><button class="order-btn" data-svc="Монтаж видео">Заказать</button></div>
+            <div class="buy"><b>от 800 ₽<small>за ролик до 1 минуты</small></b><button class="order-btn" data-svc="Монтаж видео">Заказать</button></div>
           </div>
         </article>
         <article data-k="smm text" class="prod rv">
@@ -893,7 +924,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Посты для соцсетей</h3>
             <p>Тексты и картинки в одном стиле для VK и Telegram, контент-план на месяц.</p>
             <p class="term">10 постов за 2–3 дня</p>
-            <div class="buy"><b>от 300 ₽</b><button class="order-btn" data-svc="Посты для соцсетей">Заказать</button></div>
+            <div class="buy"><b>от 300 ₽<small>за пост</small></b><button class="order-btn" data-svc="Посты для соцсетей">Заказать</button></div>
           </div>
         </article>
         <article data-k="site smm" class="prod rv">
@@ -908,7 +939,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Логотип</h3>
             <p>Три варианта, векторные файлы, версии для вывески и соцсетей.</p>
             <p class="term">Срок 3–5 дней</p>
-            <div class="buy"><b>от 2 500 ₽</b><button class="order-btn" data-svc="Логотип">Заказать</button></div>
+            <div class="buy"><b>от 2 500 ₽<small>за логотип, 3 круга правок</small></b><button class="order-btn" data-svc="Логотип">Заказать</button></div>
           </div>
         </article>
         </div>
@@ -921,35 +952,35 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <h3>Презентации</h3>
             <p>Слайды по вашему тексту со структурой, дизайном и графиками.</p>
             <p class="term">Срок 1–2 дня</p>
-            <div class="buy"><b>от 1 500 ₽</b><button class="order-btn" data-svc="Презентации">Заказать</button></div>
+            <div class="buy"><b>от 1 500 ₽<small>за 10 слайдов</small></b><button class="order-btn" data-svc="Презентации">Заказать</button></div>
           </div>
         </article>
         <article data-k="text docs smm" class="prod rv"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg></div><div class="info">
             <h3>Тексты и редактура</h3>
             <p>Корректура и редактура, тексты для объявлений, постов и сайтов.</p>
             <p class="term">Срок от 1 дня</p>
-            <div class="buy"><b>от 500 ₽</b><button class="order-btn" data-svc="Тексты и редактура">Заказать</button></div>
+            <div class="buy"><b>от 500 ₽<small>за страницу текста</small></b><button class="order-btn" data-svc="Тексты и редактура">Заказать</button></div>
           </div>
         </article>
         <article data-k="clips video smm" class="prod rv"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div class="info">
             <h3>Нарезка клипов</h3>
             <p>Короткие клипы из игр и стримов для Shorts, Reels и VK Клипов.</p>
             <p class="term">Срок 1–2 дня</p>
-            <div class="buy"><b>от 2 500 ₽</b><button class="order-btn" data-svc="Нарезка клипов">Заказать</button></div>
+            <div class="buy"><b>от 2 500 ₽<small>за 5 коротких клипов</small></b><button class="order-btn" data-svc="Нарезка клипов">Заказать</button></div>
           </div>
         </article>
         <article data-k="tr docs mp" class="prod rv"><div class="ico" aria-hidden="true">EN</div><div class="info">
             <h3>Переводы</h3>
             <p>С английского и на английский. Письма, инструкции, описания товаров.</p>
             <p class="term">Срок от 1 дня</p>
-            <div class="buy"><b>от 300 ₽</b><button class="order-btn" data-svc="Переводы">Заказать</button></div>
+            <div class="buy"><b>от 300 ₽<small>за страницу, 1 800 знаков</small></b><button class="order-btn" data-svc="Переводы">Заказать</button></div>
           </div>
         </article>
         <article data-k="mp" class="prod rv"><div class="ico" aria-hidden="true">3D</div><div class="info">
             <h3>3D-модели</h3>
             <p>Модели для сайта, рекламы и 3D-печати по фото или описанию.</p>
             <p class="term">Срок 3–7 дней</p>
-            <div class="buy"><b>от 2 000 ₽</b><button class="order-btn" data-svc="3D-модели">Заказать</button></div>
+            <div class="buy"><b>от 2 000 ₽<small>за простую модель</small></b><button class="order-btn" data-svc="3D-модели">Заказать</button></div>
           </div>
         </article>
         <article data-k="uchet docs mp site smm video clips photo text tr" class="prod rv"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.8.6-1.5 1-1.5 2"/><path d="M12 17h.01"/></svg></div><div class="info">
@@ -972,7 +1003,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     <div class="wrap">
       <h2 class="sec-title rv">Как работаем</h2>
       <ol class="flow rv">
-        <li><b>Разбор</b><span>Бесплатно. В течение часа отвечаю, что сделаю, за какой срок и сколько это стоит. Экспресс-задачи быстрее</span></li>
+        <li><b>Разбор</b><span>Бесплатно. В течение часа отвечаю, что сделаю, за какой срок и сколько это стоит. Срочно можно за +50%</span></li>
         <li><b>Начало работы</b><span>Разбираю задачу и вместе с вами составляю ТЗ, чтобы точно понять, что вы хотите получить</span></li>
         <li><b>Работа</b><span><mark>Предоплата 50%</mark> Три правки уже входят в цену</span></li>
         <li><b>Готово</b><span>Если есть правки, исправляем. Затем отдаю файлы, показываю, как пользоваться, и остаюсь на связи</span></li>
@@ -980,6 +1011,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     </div>
   </section>
 
+  <div class="fade fade-out" aria-hidden="true"></div>
   <section class="order dark" id="order">
     <div class="wrap">
       <h2 class="sec-title rv">Опишите задачу. <span class="soft">Это конфиденциально.</span></h2>
@@ -1012,23 +1044,24 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <div><label class="lb" for="name"><em>3</em>Как к вам обращаться</label><input type="text" id="name" class="ym-disable-keys" autocomplete="name" placeholder="Имя или ФИО"></div>
             <div><label class="lb" for="when"><em>4</em>Крайний срок</label><input type="text" id="when" class="ym-disable-keys" placeholder="Например: до пятницы"></div>
           </div>
+          <label class="chk"><input type="checkbox" id="urgent"> Срочно, в первую очередь (+50% к цене)</label>
           <label class="chk"><input type="checkbox" id="nda"> Нужен договор о неразглашении</label>
           <label class="chk consent"><input type="checkbox" id="agree"> <span>Даю <a href="soglasie.html" target="_blank">согласие на обработку персональных данных</a> и ознакомлен с <a href="policy.html" target="_blank">политикой</a></span></label>
           <p class="err" id="err" role="alert"></p>
           <button class="btn btn-dark" type="submit">Оформить запрос</button>
           <div class="result" id="result" hidden>
             <pre id="msg"></pre>
-            <div class="acts"><button type="button" id="copyMsg">Скопировать текст</button><a href="mailto:pz.sam@yandex.ru" id="mailLink">Отправить на почту</a><a href="https://t.me/semapz" id="tgLink">Открыть Telegram</a></div>
-            <small>Письмо на почту откроется уже заполненным. Для Telegram скопируйте текст и вставьте в чат. Страница сама ничего не отправляет и не сохраняет.</small>
+            <div class="acts"><button type="button" id="copyMsg">Скопировать текст</button><a href="mailto:pz.sam@yandex.ru" id="mailLink">Отправить на почту</a><a href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile" id="avLink">Открыть Авито</a><a href="https://t.me/semapz" id="tgLink">Открыть Telegram</a></div>
+            <small>Письмо на почту откроется уже заполненным. Для Авито или Telegram скопируйте текст и вставьте в чат. Страница сама ничего не отправляет и не сохраняет.</small>
           </div>
         </form>
         <div class="side">
           <div class="direct rv">
             <b>Или напишите напрямую</b>
             <div class="dir-btns">
-              <a class="btn btn-light" href="https://t.me/semapz">Telegram @semapz</a>
-              <a class="btn btn-line" href="mailto:pz.sam@yandex.ru">Почта pz.sam@yandex.ru</a>
-              <a class="btn btn-line" href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile">Профиль и отзывы на Авито</a>
+              <a class="btn btn-light" href="mailto:pz.sam@yandex.ru">Почта pz.sam@yandex.ru</a>
+              <a class="btn btn-line" href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile">Написать на Авито</a>
+              <a class="btn btn-line" href="https://t.me/semapz">Telegram @semapz</a>
             </div>
           </div>
           <div class="privacy">
@@ -1055,6 +1088,8 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
         <details><summary>Вы работаете в Excel?</summary><p>Да, Excel для меня основной инструмент. Формулы, сводные таблицы, графики, защита листов, при необходимости макросы. Если хотите смотреть данные с телефона, сделаю то же в Google Таблицах и соберу простое удобное приложение.</p></details>
         <details><summary>Работаете с 1С?</summary><p>Да, делаю выгрузки и загрузки, отчёты, сверки между 1С и Excel. Если задача требует серьёзной переделки самой 1С, честно скажу об этом на разборе и предложу решение.</p></details>
         <details><summary>Что будет с моими данными?</summary><p>Работаю с копиями файлов, ничего не публикую и не передаю другим людям. По запросу подпишу договор о неразглашении. Чувствительные данные можно обезличить перед обработкой.</p></details>
+        <details><summary>Можно срочно?</summary><p>Да. Срочный заказ беру в работу первым, вне очереди, это +50% к цене. Точный срок назову сразу, когда увижу задачу. Доклады и презентации к завтрашнему дню частый случай.</p></details>
+        <details><summary>Можете подделать подпись, печать или справку?</summary><p>Нет. Подписи, печати, справки и чужие документы не подделываю. Оформляю, проверяю и привожу в порядок только ваши настоящие документы и данные.</p></details>
         <details><summary>Вы работаете официально?</summary><p>Да. Я зарегистрирован как самозанятый, с каждой оплаты плачу налог и присылаю чек. Могу заключить договор.</p></details>
         <details><summary>Почему дешевле, чем у студий?</summary><p>Рутину делают нейросети, а я настраиваю их, объясняю задачу, проверяю результат и отвечаю за него. Вы платите за итог, а не за офис и менеджеров.</p></details>
         <details><summary>Пишете курсовые и дипломы?</summary><p>Нет, учебные работы за студентов не пишу. Могу вычитать и оформить ваш собственный текст или сделать презентацию к защите.</p></details>
@@ -1067,12 +1102,12 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     <div class="wrap">
       <h2 class="rv">Начнём?</h2>
       <p class="rv">Опишите задачу. Ответ и цена в течение часа в любое время суток, если не сплю 🙂</p>
-      <div class="cta-row rv"><a class="btn btn-glow" href="https://t.me/semapz">Написать @semapz</a><a class="btn btn-line" href="mailto:pz.sam@yandex.ru">Написать на почту</a><a class="btn btn-line" href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile">Профиль на Авито</a></div>
+      <div class="cta-row rv"><a class="btn btn-glow" href="mailto:pz.sam@yandex.ru">Написать на почту</a><a class="btn btn-line" href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile">Написать на Авито</a><a class="btn btn-line" href="https://t.me/semapz">Telegram @semapz</a></div>
       <div class="contact-line"><span>pz.sam@yandex.ru</span><button class="copy" type="button" data-copy="pz.sam@yandex.ru">Скопировать почту</button></div>
     </div>
   </section>
 </main>
-<div class="mbar" id="mbar" aria-hidden="true"><a class="btn btn-light" href="https://t.me/semapz" tabindex="-1">Написать в Telegram</a><a class="btn btn-line" href="mailto:pz.sam@yandex.ru" tabindex="-1">Почта</a></div>
+<div class="mbar" id="mbar" aria-hidden="true"><a class="btn btn-light" href="mailto:pz.sam@yandex.ru" tabindex="-1">Написать на почту</a><a class="btn btn-line" href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile" tabindex="-1">Авито</a></div>
 
 <dialog class="dlg" id="demoDlg" aria-labelledby="dlgTitle">
   <div class="dlg-head"><h3 id="dlgTitle">Пример учёта автосервиса</h3><button class="dlg-x" type="button" aria-label="Закрыть пример">×</button></div>
@@ -1129,7 +1164,7 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* hero: network of dots that gathers into constellations, with comets */
 (function(){
-  var c=document.getElementById('field'),x=c.getContext('2d'),W,H,pts=[],m={x:-9999,y:-9999},comets=[],con=null,run=true,
+  var c=document.getElementById('field'),x=c.getContext('2d'),W,H,pts=[],stars=[],m={x:-9999,y:-9999},comets=[],con=null,run=true,
       nextCon=2600,nextComet=1600,last=0,ci=0;
   function hex(v,d){v=(v||'').trim();if(!/^#[0-9a-f]{6}$/i.test(v))return d;return[parseInt(v.slice(1,3),16),parseInt(v.slice(3,5),16),parseInt(v.slice(5,7),16)];}
   var cs=getComputedStyle(document.documentElement),cols=[hex(cs.getPropertyValue('--c1'),[94,231,255]),hex(cs.getPropertyValue('--c2'),[139,124,255]),hex(cs.getPropertyValue('--c3'),[255,181,71])];
@@ -1141,7 +1176,9 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     {n:'Лебедь',s:[[.5,0],[.5,.38],[.5,.68],[.5,1],[.06,.28],[.94,.5]],e:[[0,1],[1,2],[2,3],[1,4],[1,5]]}];
   function size(){var d=Math.min(devicePixelRatio||1,2);W=c.clientWidth;H=c.clientHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
     var n=Math.round(Math.min(120,W*H/12000));pts=[];con=null;
-    for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.6+.6});}
+    for(var i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.6+.6});
+    var ns=Math.round(Math.min(240,W*H/5200));stars=[];
+    for(var s2=0;s2<ns;s2++){var big=Math.random()<.06;stars.push({x:Math.random()*W,y:Math.random()*H,r:big?1.2+Math.random()*.6:.35+Math.random()*.75,b:big?.95:.25+Math.random()*.6,ph:Math.random()*6.283,sp:.0006+Math.random()*.0018,big:big});}}
   /* free space for a constellation: right of the headline and under the planet, or above the headline on phones */
   function room(){var cr=c.getBoundingClientRect(),h1=document.querySelector('.hero h1').getBoundingClientRect(),R;
     R={x:h1.right-cr.left+40,y:100};R.w=W-R.x-40;R.h=H-R.y-120;
@@ -1158,6 +1195,9 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function comet(){var sp=.5+Math.random()*.35,a=(22+Math.random()*20)*Math.PI/180;
     comets.push({x:W*(.35+Math.random()*.75),y:-10-Math.random()*H*.2,vx:-Math.cos(a)*sp,vy:Math.sin(a)*sp,len:240+Math.random()*120});}
   function f(now){if(!last)last=now;var dt=Math.min(50,now-last);last=now;x.clearRect(0,0,W,H);
+    for(var si=0;si<stars.length;si++){var st=stars[si],al=reduce?st.b*.8:st.b*(.5+.5*Math.sin(now*st.sp+st.ph));
+      x.fillStyle='rgba(226,234,255,'+al.toFixed(3)+')';x.beginPath();x.arc(st.x,st.y,st.r,0,6.283);x.fill();
+      if(st.big&&al>.55){x.fillStyle='rgba(226,234,255,'+((al-.55)*.5).toFixed(3)+')';x.fillRect(st.x-st.r*4,st.y-.35,st.r*8,.7);x.fillRect(st.x-.35,st.y-st.r*4,.7,st.r*8);}}
     if(!reduce){nextCon-=dt;if(!con&&nextCon<=0)startCon();
       if(con){con.t+=dt;if(con.t>6400){endCon();nextCon=4500+Math.random()*3000;}}
       nextComet-=dt;if(nextComet<=0){comet();nextComet=3000+Math.random()*4500;}}
@@ -1196,7 +1236,8 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var room=innerHeight-st.offsetTop-parseFloat(getComputedStyle(st).paddingTop)-hd.offsetHeight-cap-innerHeight*(mobile.matches?.05:.035)-(mobile.matches?34:6);
     var k=Math.min(mobile.matches?1:1.6,room/(r.height*(mobile.matches?1:.89)),(innerWidth*.94)/r.width);duo.style.zoom=Math.max(.45,k).toFixed(3);}
   function e(x){x=Math.min(1,Math.max(0,x));return x*x*(3-2*x);}
-  function u(){var r=sc.getBoundingClientRect(),tot=r.height-innerHeight,t=reduce?1:Math.min(1,Math.max(0,-r.top/tot));
+  var tMax=0;
+  function u(){var r=sc.getBoundingClientRect(),tot=r.height-innerHeight,t=reduce?1:Math.min(1,Math.max(0,-r.top/tot));tMax=Math.max(tMax,t);t=tMax;
     var a=e((t-.1)/.16);ph.style.setProperty('--po',a.toFixed(3));ph.style.setProperty('--py',((1-a)*60).toFixed(1)+'px');
     feed.forEach(function(f){var k=e((t-f[2])/.08),q=e((t-f[2]-.05)/.08);
       document.querySelector('#'+f[0]+' .mk').style.setProperty('--k',k.toFixed(3));
@@ -1262,6 +1303,7 @@ document.querySelectorAll('.order-btn').forEach(function(b){
     if(svcs.length)lines.push('Нужно: '+svcs.join(', '));
     if(task)lines.push('Задача: '+task);
     if(when)lines.push('Срок: '+when);
+    if(document.getElementById('urgent').checked)lines.push('Нужно срочно, готов доплатить 50% за первую очередь.');
     if(nda)lines.push('Прошу подписать договор о неразглашении (NDA) до начала работы.');
     msg.textContent=lines.join('\n');
     document.getElementById('mailLink').href='mailto:pz.sam@yandex.ru?subject='+encodeURIComponent('Запрос с сайта SEMA AI')+'&body='+encodeURIComponent(lines.join('\n'));

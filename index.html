@@ -574,7 +574,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .reel .sec-title,.stage h3{display:block;width:fit-content;margin:0 auto;text-align:center;padding:.5em 1.2em;border:1px solid rgba(242,196,109,.32);border-radius:28px;background:rgba(255,255,255,.035);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 50px -30px rgba(0,0,0,.7)}
 .reel .sec-title{font-size:clamp(26px,3.4vw,46px);border-radius:999px;max-width:none;white-space:nowrap}
 .stage h3{max-width:min(92vw,64ch);font-weight:600}
-@media (min-width:681px){.stage{padding-top:76px}.stage h3{font-size:clamp(20px,2vw,28px);padding:.45em 1.2em}.ex-note{left:0;right:auto;bottom:0}}
+@media (min-width:681px){.stage{padding-top:76px}.stage h3{font-size:clamp(20px,2vw,28px);padding:.45em 1.2em}.duo{align-items:flex-start;margin-top:2.4vh}.nb2{zoom:1.12;margin-top:42px}.ex-note{left:4px;right:auto;bottom:auto;top:6px}}
 .prod{border:1px solid rgba(10,15,31,.07);box-shadow:0 1px 2px rgba(10,15,31,.05),0 22px 44px -26px rgba(10,15,31,.32)}
 .mini .ico{position:relative;isolation:isolate;background:radial-gradient(120% 100% at 20% 0%,#1E3A8A 0%,#0A0F1F 72%);color:#1a1200;font-size:21px}
 .mini .ico::before{content:"";position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:linear-gradient(180deg,#F8DA96,#E9B355);box-shadow:0 0 0 6px rgba(242,196,109,.14),0 8px 22px rgba(242,196,109,.35);z-index:-1}
@@ -1194,7 +1194,7 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var feed=[['mk1','ac1',.30],['mk2','ac2',.44],['mk3','ac3',.58]];
   function fit(){duo.style.zoom=1;var r=duo.getBoundingClientRect(),cap=0;
     var room=innerHeight-st.offsetTop-parseFloat(getComputedStyle(st).paddingTop)-hd.offsetHeight-cap-innerHeight*(mobile.matches?.05:.035)-(mobile.matches?34:6);
-    var k=Math.min(mobile.matches?1:1.5,room/r.height,(innerWidth*.94)/r.width);duo.style.zoom=Math.max(.45,k).toFixed(3);}
+    var k=Math.min(mobile.matches?1:1.6,room/(r.height*(mobile.matches?1:.89)),(innerWidth*.94)/r.width);duo.style.zoom=Math.max(.45,k).toFixed(3);}
   function e(x){x=Math.min(1,Math.max(0,x));return x*x*(3-2*x);}
   function u(){var r=sc.getBoundingClientRect(),tot=r.height-innerHeight,t=reduce?1:Math.min(1,Math.max(0,-r.top/tot));
     var a=e((t-.1)/.16);ph.style.setProperty('--po',a.toFixed(3));ph.style.setProperty('--py',((1-a)*60).toFixed(1)+'px');

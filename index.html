@@ -32,7 +32,7 @@
   --c1:#7E97D6;
   --c2:#A9B9E8;
   --c3:#F2C46D;
-  --mist:#F5F5F7;
+  --mist:#EDEFF4;
   --graphite:#1D1D1F;
   --dim:#86868B;
   --ion:#F2C46D;
@@ -552,6 +552,43 @@ body.ck-open .mbar{display:none}
   .ph2{opacity:1;transform:none}
   .js .rv.wait{opacity:1;transform:none}
 }
+
+/* v11: мягче шрифт, рамки, разделители, контраст карточек */
+.reel .halo{-webkit-mask-image:linear-gradient(to bottom,#000 50%,transparent 88%);mask-image:linear-gradient(to bottom,#000 50%,transparent 88%)}
+@media (max-width:680px){.reel .halo{width:560px;height:560px;top:50%}}
+h1,h2,h3{font-weight:700;letter-spacing:-.022em}
+h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
+.hero h1{letter-spacing:-.03em;line-height:1.05}
+.brand{font-weight:700}
+.buy b{font-weight:700}
+.statement,.scene{position:relative}
+.statement::before,.scene::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(1100px,86%);height:1px;background:linear-gradient(90deg,transparent,rgba(126,151,214,.35) 28%,rgba(242,196,109,.6) 50%,rgba(126,151,214,.35) 72%,transparent);z-index:2}
+.statement::after,.scene::after{content:"";position:absolute;top:-4px;left:50%;width:8px;height:8px;margin-left:-4px;transform:rotate(45deg);background:#F2C46D;box-shadow:0 0 14px rgba(242,196,109,.7);z-index:2}
+.statement{padding:110px 0 40px}
+.statement h2{max-width:1000px;margin:0 auto;padding:clamp(34px,5vw,70px) clamp(20px,4vw,56px);border:1px solid rgba(242,196,109,.28);border-radius:36px;background:radial-gradient(120% 120% at 50% 0%,rgba(126,151,214,.13),rgba(255,255,255,.015) 65%);box-shadow:0 30px 80px -40px rgba(0,0,0,.6)}
+.statement .q{display:inline-block;max-width:none;margin:0;padding:.55em 1.2em;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(255,255,255,.05);color:#eef1f8;font-family:var(--font);font-weight:500;font-size:.46em;line-height:1.3;letter-spacing:-.01em}
+.statement .no{font-weight:600;letter-spacing:-.03em}
+.statement .but{color:#fff;font-weight:500;font-size:.6em;max-width:32ch}
+.statement .but b{color:#fff;font-weight:700;background:linear-gradient(transparent 60%,rgba(242,196,109,.5) 60%);padding:0 .1em;border-radius:2px}
+.statement .but .ctl{display:block;margin-top:.55em;color:#F2C46D;font-weight:600}
+.reel .sec-title,.stage h3{display:block;width:fit-content;margin:0 auto;text-align:center;padding:.5em 1.2em;border:1px solid rgba(242,196,109,.32);border-radius:28px;background:rgba(255,255,255,.035);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 50px -30px rgba(0,0,0,.7)}
+.reel .sec-title{font-size:clamp(26px,3.4vw,46px);border-radius:999px;max-width:none;white-space:nowrap}
+.stage h3{max-width:min(90vw,30ch);font-weight:600}
+.prod{border:1px solid rgba(10,15,31,.07);box-shadow:0 1px 2px rgba(10,15,31,.05),0 22px 44px -26px rgba(10,15,31,.32)}
+.mini .ico{position:relative;isolation:isolate;background:radial-gradient(120% 100% at 20% 0%,#1E3A8A 0%,#0A0F1F 72%);color:#1a1200;font-size:21px}
+.mini .ico::before{content:"";position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:linear-gradient(180deg,#F8DA96,#E9B355);box-shadow:0 0 0 6px rgba(242,196,109,.14),0 8px 22px rgba(242,196,109,.35);z-index:-1}
+.mini .ico svg{width:28px;height:28px}
+@media (max-width:680px){
+  .statement{padding:80px 0 30px}
+  .statement h2{border-radius:26px}
+  .statement .q{font-size:.62em;border-radius:20px}
+  .statement .but{font-size:.7em}
+  .reel .sec-title{white-space:normal;border-radius:24px;font-size:24px}
+  .stage h3{border-radius:20px;font-size:19px}
+  .mini .ico::before{width:48px;height:48px;margin:-24px 0 0 -24px}
+  .mini .ico{font-size:17px}
+  .mini .ico svg{width:24px;height:24px}
+}
 </style>
 </head>
 <body>
@@ -656,7 +693,7 @@ body.ck-open .mbar{display:none}
 
   <section class="statement dark">
     <div class="wrap">
-      <h2 class="rv"><span class="q">Вам обещали, что ИИ всё сделает за 5 минут?</span><span class="no">Так не бывает.</span><span class="but">Но работу, на которую уходили недели, он делает <b>за часы</b>. Если им правильно управлять.</span></h2>
+      <h2 class="rv"><span class="q">Вам обещали, что ИИ всё сделает за 5 минут?</span><span class="no">Так не бывает.</span><span class="but">Но работу, на которую уходили недели, он делает <b>за часы</b>. <span class="ctl">Если им правильно управлять.</span></span></h2>
     </div>
   </section>
 

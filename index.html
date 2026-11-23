@@ -11,16 +11,17 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <meta name="theme-color" content="#0A0F1F">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="SEMA AI">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://semapz.ru/">
-<meta property="og:title" content="Вы объясняете задачу, я переведу её на язык нейросетей">
-<meta property="og:description" content="Учёт без бумаги, документы по ГОСТ, фото, видео, сайты и реклама. Бесплатно разберу задачу и покажу пример на ваших данных.">
-<meta property="og:image" content="https://semapz.ru/img/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="SEMA AI. Вы объясняете задачу, я переведу её на язык нейросетей">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="semapz.ru">
+<meta property="og:description" content="SEMA AI">
+<meta property="og:image" content="https://semapz.ru/img/og-icon.png">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="SEMA AI">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="semapz.ru">
+<meta name="twitter:description" content="SEMA AI">
 <link rel="preload" href="fonts/inter-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts.css">
 <style>
@@ -631,6 +632,16 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .mp-grid a:hover{border-color:#F2C46D;color:#F2C46D}
 .mp-grid a{white-space:nowrap;padding:10px 8px}
 @media (max-width:440px){.mp-grid{grid-template-columns:1fr}}
+/* v14: заявка через Яндекс Форму, официальные письма */
+.form.yaf{padding:30px 20px 18px}
+.form.yaf h3,.form.yaf .hint{padding:0 12px}
+.yaf-box{margin-top:12px;background:#fff;border-radius:18px;overflow:hidden}
+.yaf-box iframe{display:block;width:100%;height:1700px;border:0;background:#fff}
+.yaf-alt{margin:10px 12px 0;font-size:14px;color:#6e6e73}
+.yaf-alt a{color:#1E3A8A;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.mini .prod.wide{grid-column:1/-1}
+@media (min-width:1061px){.order-grid .side{position:sticky;top:92px}}
+@media (max-width:640px){.form.yaf{padding:22px 6px 14px}.form.yaf h3,.form.yaf .hint{padding:0 14px}}
 </style>
 </head>
 <body>
@@ -979,6 +990,13 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <div class="buy"><b>от 500 ₽<small>за страницу текста</small></b><button class="order-btn" data-svc="Тексты и редактура">Заказать</button></div>
           </div>
         </article>
+        <article data-k="docs text" class="prod rv"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 11h7M9 14.5h7M9 18h4"/></svg></div><div class="info">
+            <h3>Официальные письма</h3>
+            <p>Перепишу ваш текст официально-деловым языком: обращения, заявления, жалобы и письма в госорганы.</p>
+            <p class="term">Срок от 1 дня</p>
+            <div class="buy"><b>от 500 ₽<small>за документ</small></b><button class="order-btn" data-svc="Официальные письма">Заказать</button></div>
+          </div>
+        </article>
         <article data-k="clips video smm" class="prod rv"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg></div><div class="info">
             <h3>Нарезка клипов</h3>
             <p>Короткие клипы из игр и стримов для Shorts, Reels и VK Клипов.</p>
@@ -1000,7 +1018,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
             <div class="buy"><b>от 2 000 ₽<small>за простую модель</small></b><button class="order-btn" data-svc="3D-модели">Заказать</button></div>
           </div>
         </article>
-        <article data-k="uchet docs mp site smm video clips photo text tr" class="prod rv"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.8.6-1.5 1-1.5 2"/><path d="M12 17h.01"/></svg></div><div class="info">
+        <article data-k="uchet docs mp site smm video clips photo text tr" class="prod rv wide"><div class="ico" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 114 2c-.8.6-1.5 1-1.5 2"/><path d="M12 17h.01"/></svg></div><div class="info">
             <h3>Другая задача</h3>
             <p>Не нашли свою? Опишите, и я скажу, можно ли это сделать.</p>
             <p class="term">Срок обсудим</p>
@@ -1033,45 +1051,14 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     <div class="wrap">
       <h2 class="sec-title rv">Опишите задачу. <span class="soft">Это конфиденциально.</span></h2>
       <div class="order-grid">
-        <form class="form rv" id="orderForm" novalidate>
-          <h3>Не знаете, с чего начать?</h3>
-          <p class="hint">Отметьте, что нужно, и я оформлю запрос за вас.</p>
-          <label class="lb" id="svcLabel"><em>1</em>Что нужно сделать</label>
-          <div class="opts" role="group" aria-labelledby="svcLabel" id="svcOpts">
-            <label class="opt"><input type="checkbox" value="Учёт без бумаги"><span>Учёт без бумаги</span></label>
-            <label class="opt"><input type="checkbox" value="Документы и отчёты"><span>Документы</span></label>
-            <label class="opt"><input type="checkbox" value="Обработка фото"><span>Фото</span></label>
-            <label class="opt"><input type="checkbox" value="Монтаж видео"><span>Видео</span></label>
-            <label class="opt"><input type="checkbox" value="Реклама и карточки товара"><span>Реклама и карточки</span></label>
-            <label class="opt more"><input type="checkbox" value="Сайт-визитка"><span>Сайт</span></label>
-            <label class="opt more"><input type="checkbox" value="Таблицы и базы данных"><span>Таблицы и базы</span></label>
-            <label class="opt more"><input type="checkbox" value="Презентации"><span>Презентации</span></label>
-            <label class="opt more"><input type="checkbox" value="Тексты и редактура"><span>Редактура текста</span></label>
-            <label class="opt more"><input type="checkbox" value="Посты для соцсетей"><span>Посты</span></label>
-            <label class="opt more"><input type="checkbox" value="Логотип"><span>Логотип</span></label>
-            <label class="opt more"><input type="checkbox" value="Нарезка клипов"><span>Нарезка клипов</span></label>
-            <label class="opt more"><input type="checkbox" value="Переводы"><span>Переводы</span></label>
-            <label class="opt more"><input type="checkbox" value="3D-модели"><span>3D-модели</span></label>
-            <label class="opt more"><input type="checkbox" value="Другая задача"><span>Другое</span></label>
+        <div class="form yaf rv" id="orderForm">
+          <h3>Оставьте заявку</h3>
+          <p class="hint">Отвечу в течение часа: позвоню или напишу, назову цену и срок.</p>
+          <div class="yaf-box">
+            <iframe id="yaForm" title="Заявка SEMA AI" src="https://forms.yandex.ru/u/6b04729bc45c07bc382a1ebc/?iframe=1" name="ya-form-6b04729bc45c07bc382a1ebc" loading="lazy"></iframe>
           </div>
-          <button type="button" class="more-btn" id="moreOpts" aria-expanded="false" aria-controls="svcOpts">Показать все</button>
-          <label class="lb" for="task"><em>2</em>Опишите задачу как можно подробнее</label>
-          <textarea id="task" class="ym-disable-keys" placeholder="Например: веду склад запчастей в тетради, хочу видеть остатки и вовремя заказывать"></textarea>
-          <div class="two">
-            <div><label class="lb" for="name"><em>3</em>Как к вам обращаться</label><input type="text" id="name" class="ym-disable-keys" autocomplete="name" placeholder="Имя или ФИО"></div>
-            <div><label class="lb" for="when"><em>4</em>Крайний срок</label><input type="text" id="when" class="ym-disable-keys" placeholder="Например: до пятницы"></div>
-          </div>
-          <label class="chk"><input type="checkbox" id="urgent"> Срочно, в первую очередь (+50% к цене)</label>
-          <label class="chk"><input type="checkbox" id="nda"> Нужен договор о неразглашении</label>
-          <label class="chk consent"><input type="checkbox" id="agree"> <span>Даю <a href="soglasie.html" target="_blank">согласие на обработку персональных данных</a> и ознакомлен с <a href="policy.html" target="_blank">политикой</a></span></label>
-          <p class="err" id="err" role="alert"></p>
-          <button class="btn btn-dark" type="submit">Оформить запрос</button>
-          <div class="result" id="result" hidden>
-            <pre id="msg"></pre>
-            <div class="acts"><button type="button" id="copyMsg">Скопировать текст</button><a href="mailto:pz.sam@yandex.ru" id="mailLink">Отправить на почту</a><a href="https://www.avito.ru/user/81c87984345cf748bfb98c0b51673621/profile" id="avLink">Открыть Авито</a><a href="https://t.me/semapz" id="tgLink">Открыть Telegram</a></div>
-            <small>Письмо на почту откроется уже заполненным. Для Авито или Telegram скопируйте текст и вставьте в чат. Страница сама ничего не отправляет и не сохраняет.</small>
-          </div>
-        </form>
+          <p class="yaf-alt">Форма не открылась? <a href="https://forms.yandex.ru/u/6b04729bc45c07bc382a1ebc/" target="_blank" rel="noopener">Откройте её в новой вкладке</a></p>
+        </div>
         <div class="side">
           <div class="direct rv">
             <b>Или напишите напрямую</b>
@@ -1297,50 +1284,30 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     b.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){var n=tabs[(i+(e.key==='ArrowRight'?1:tabs.length-1))%tabs.length];sel(n);n.focus();}});});
 })();
 
-/* chips: show the rest */
-(function(){var b=document.getElementById('moreOpts'),o=document.getElementById('svcOpts');
-  b.addEventListener('click',function(){var on=!o.classList.contains('all');o.classList.toggle('all',on);b.setAttribute('aria-expanded',on);b.textContent=on?'Скрыть':'Показать все';});})();
 /* the whole card works like its "Заказать" button */
 document.querySelectorAll('.prod').forEach(function(card){card.addEventListener('click',function(e){
   if(e.target.closest('button,a,video'))return;var b=card.querySelector('.order-btn');if(b)b.click();});});
 document.querySelectorAll('.lede-link').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();document.getElementById('order').scrollIntoView({behavior:reduce?'auto':'smooth'});});});
-/* order buttons -> preselect service in the form */
-document.querySelectorAll('.order-btn').forEach(function(b){
-  b.addEventListener('click',function(){
-    var v=b.dataset.svc;
-    document.querySelectorAll('#svcOpts input').forEach(function(i){ if(i.value===v){ i.checked=true; if(i.closest('.more')){document.getElementById('svcOpts').classList.add('all');var mb=document.getElementById('moreOpts');mb.setAttribute('aria-expanded','true');mb.textContent='Скрыть';} } });
-    document.getElementById('order').scrollIntoView({behavior:reduce?'auto':'smooth'});
-    setTimeout(function(){document.getElementById('task').focus({preventScroll:true});},reduce?0:700);
-  });
-});
-
-/* order form -> compose message */
+/* order: Yandex Form, card buttons preselect the service */
 (function(){
-  var f=document.getElementById('orderForm'),err=document.getElementById('err'),res=document.getElementById('result'),msg=document.getElementById('msg');
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var svcs=[].slice.call(document.querySelectorAll('#svcOpts input:checked')).map(function(i){return i.value;});
-    var task=document.getElementById('task').value.trim();
-    if(!svcs.length&&!task){err.textContent='Выберите услугу или опишите задачу хотя бы в двух словах.';return;}
-    if(!document.getElementById('agree').checked){err.textContent='Отметьте согласие на обработку данных, без него я не смогу ответить на запрос.';document.getElementById('agree').focus();return;}
-    err.textContent='';
-    goal('order_form');
-    var name=document.getElementById('name').value.trim(),when=document.getElementById('when').value.trim(),nda=document.getElementById('nda').checked;
-    var lines=['Здравствуйте! Запрос с сайта SEMA AI.'];
-    if(name)lines.push('Меня зовут: '+name);
-    if(svcs.length)lines.push('Нужно: '+svcs.join(', '));
-    if(task)lines.push('Задача: '+task);
-    if(when)lines.push('Срок: '+when);
-    if(document.getElementById('urgent').checked)lines.push('Нужно срочно, готов доплатить 50% за первую очередь.');
-    if(nda)lines.push('Прошу подписать договор о неразглашении (NDA) до начала работы.');
-    msg.textContent=lines.join('\n');
-    document.getElementById('mailLink').href='mailto:pz.sam@yandex.ru?subject='+encodeURIComponent('Запрос с сайта SEMA AI')+'&body='+encodeURIComponent(lines.join('\n'));
-    res.hidden=false;
-    res.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+  var FORM='https://forms.yandex.ru/u/6b04729bc45c07bc382a1ebc/',Q='answer_multiple_answers_9008994708352988';
+  var ids={'Учёт без бумаги':'9008994708352998','Документы и отчёты':'1795453621666','Таблицы и базы данных':'1795453642909','Сайт-визитка':'1795453642919','Реклама и карточки товара':'1795453642937','Обработка фото':'1795453642958','Монтаж видео':'1795453643006','Нарезка клипов':'1795453643037','Посты для соцсетей':'1795453643062','Логотип':'1795453643096','Презентации':'1795453643142','Тексты и редактура':'1795453643189','Официальные письма':'1795453643235','Переводы':'1795453643281','3D-модели':'1795453643312','Другая задача':'1795453643358'};
+  var fr=document.getElementById('yaForm');
+  document.querySelectorAll('.order-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var id=ids[b.dataset.svc];
+      if(fr&&id){fr.loading='eager';fr.src=FORM+'?iframe=1&'+Q+'='+id;}
+      document.getElementById('order').scrollIntoView({behavior:reduce?'auto':'smooth'});
+    });
   });
-  document.getElementById('copyMsg').addEventListener('click',function(){
-    var b=this,o=b.textContent;
-    try{navigator.clipboard.writeText(msg.textContent).then(function(){b.textContent='Скопировано';setTimeout(function(){b.textContent=o;},1800);},function(){b.textContent='Выделите текст и скопируйте';});}catch(e){b.textContent='Выделите текст и скопируйте';}
+  var sent=false;
+  window.addEventListener('message',function(e){
+    if(!fr||e.source!==fr.contentWindow||!/^https:\/\/forms\.yandex\.ru$/.test(e.origin))return;
+    var d=e.data;try{if(typeof d==='string')d=JSON.parse(d);}catch(err){return;}
+    if(!d||typeof d!=='object')return;
+    var h=parseInt(d['iframe-height'],10);
+    if(h>200&&h<6000)fr.style.height=h+'px';
+    if(!sent&&(d.message==='sent'||d.type==='submit'||d.sent)){sent=true;goal('order_form');}
   });
 })();
 

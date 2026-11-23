@@ -626,9 +626,11 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .mp-addr span{font-weight:600;font-size:16px;overflow-wrap:anywhere}
 @media (max-width:440px){.mp-addr{flex-direction:column;align-items:stretch;text-align:center;padding:12px}.mp-addr button{width:100%}}
 .mp-addr button{flex:none;border:0;border-radius:12px;padding:10px 14px;min-height:44px;font:inherit;font-size:14px;font-weight:600;cursor:pointer;background:linear-gradient(180deg,#F8DA96,#E9B355);color:#1a1200}
-.mp-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .mp-grid a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:600;font-size:15px;text-align:center;cursor:pointer}
 .mp-grid a:hover{border-color:#F2C46D;color:#F2C46D}
+.mp-grid a{white-space:nowrap;padding:10px 8px}
+@media (max-width:440px){.mp-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -1174,7 +1176,6 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     <a id="mpYa" target="_blank" rel="noopener">Яндекс Почта</a>
     <a id="mpMr" target="_blank" rel="noopener">Mail.ru</a>
     <a id="mpGm" target="_blank" rel="noopener">Gmail</a>
-    <a id="mpApp">Почтовая программа</a>
   </div>
 </dialog>
 <div class="ck" id="ck" role="region" aria-label="Cookie" hidden>
@@ -1441,7 +1442,6 @@ function goal(name){try{if(window.ym)ym(YM_ID,'reachGoal',name);}catch(e){}}
     document.getElementById('mpYa').href='https://mail.yandex.ru/compose?to='+TO+q('subject',sub)+q('body',body);
     document.getElementById('mpMr').href='https://e.mail.ru/compose/?to='+TO+q('subject',sub)+q('body',body);
     document.getElementById('mpGm').href='https://mail.google.com/mail/?view=cm&fs=1&to='+TO+q('su',sub)+q('body',body);
-    document.getElementById('mpApp').href=href;
     document.getElementById('mpNote').textContent=body?'Текст запроса уже вставлен в письмо. Выберите, где вам удобнее отправить.':'Выберите, где вам удобнее написать.';
     var cb=document.getElementById('mpCopy');cb.textContent='Скопировать адрес';
     dlg.showModal();

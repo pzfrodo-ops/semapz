@@ -707,6 +707,11 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .yaf-dlg .yaf-alt{margin:10px 0 16px;font-size:13px}
 html.dlg-lock{overflow:hidden}
 @media (max-width:640px){.yaf-dlg{max-height:94vh;border-radius:20px}.yaf-dlg .yaf-box{margin:6px 4px 0}}
+/* v21: сцена с тетрадью без прилипания, всплывает при появлении */
+.scene{height:auto!important}
+.stage{position:relative!important;top:auto;height:auto!important;overflow:visible!important;padding:80px 0 100px!important;-webkit-mask-image:none!important;mask-image:none!important}
+.duo{margin-top:0!important}
+@media (max-width:680px){.stage{padding:50px 0 80px!important}}
 </style>
 </head>
 <body>
@@ -818,7 +823,6 @@ html.dlg-lock{overflow:hidden}
 
   <section class="scene" id="scene" aria-label="Пример: записи из тетради превращаются в приложение на телефоне">
     <div class="stage">
-      <h3>Листайте, и тетрадь превратится в понятную картину вашего дела</h3>
       <div class="duo" id="duo">
         <div class="nb2" aria-hidden="true">
           <div class="rings"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -1308,26 +1312,28 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   size();requestAnimationFrame(f);
 })();
 
-/* scroll scene: notebook lines feed the phone cards */
+/* scene: notebook and phone pop in when reached, then the phone fills itself in from the notebook */
 (function(){
-  var sc=document.getElementById('scene'),duo=document.getElementById('duo'),ph=document.getElementById('ph2'),
-      st=sc.querySelector('.stage'),hd=st.querySelector('h3'),
+  var duo=document.getElementById('duo'),ph=document.getElementById('ph2'),nb=duo.querySelector('.nb2'),
       rev=document.getElementById('acRev'),mobile=matchMedia('(max-width:680px)');
-  var feed=[['mk1','ac1',.20],['mk2','ac2',.42],['mk3','ac3',.64]];
-  function fit(){duo.style.zoom=1;var r=duo.getBoundingClientRect(),cap=0;
-    var room=innerHeight-parseFloat(getComputedStyle(st).paddingTop)-hd.offsetHeight-cap-innerHeight*(mobile.matches?.05:.035)-(mobile.matches?34:6);
-    var k=Math.min(mobile.matches?1:1.6,room/(r.height*(mobile.matches?1:.89)),(innerWidth*.94)/r.width);duo.style.zoom=Math.max(.45,k).toFixed(3);}
+  var feed=[['mk1','ac1',.30],['mk2','ac2',.50],['mk3','ac3',.70]],DUR=7500,t0=0,done=false;
+  function fit(){duo.style.zoom=1;var r=duo.getBoundingClientRect();
+    var k=Math.min(mobile.matches?1:1.3,(innerHeight*.84)/r.height,(innerWidth*.94)/r.width);duo.style.zoom=Math.max(.45,k).toFixed(3);}
   function e(x){x=Math.min(1,Math.max(0,x));return x*x*(3-2*x);}
-  var tMax=0;
-  function u(){var r=sc.getBoundingClientRect(),tot=r.height-innerHeight,t=reduce?1:Math.min(1,Math.max(0,-r.top/tot));tMax=Math.max(tMax,t);t=tMax;
-    var a=e(t/.16);ph.style.setProperty('--po',a.toFixed(3));ph.style.setProperty('--py',((1-a)*60).toFixed(1)+'px');
-    feed.forEach(function(f){var k=e((t-f[2])/.1),q=e((t-f[2]-.05)/.1);
+  function u(t){
+    var n=e(t/.12);nb.style.opacity=n.toFixed(3);nb.style.translate='0 '+((1-n)*40).toFixed(1)+'px';nb.style.scale=(.94+.06*n).toFixed(3);
+    var a=e((t-.08)/.14);ph.style.setProperty('--po',a.toFixed(3));ph.style.setProperty('--py',((1-a)*60).toFixed(1)+'px');
+    feed.forEach(function(f){var k=e((t-f[2])/.08),q=e((t-f[2]-.05)/.08);
       document.querySelector('#'+f[0]+' .mk').style.setProperty('--k',k.toFixed(3));
-      var c=document.getElementById(f[1]);c.style.setProperty('--on',q.toFixed(3));c.style.setProperty('--ring',(q>0&&t<f[2]+.18?1:0));});
-    rev.textContent=Math.round(16200*e((t-.25)/.12)).toLocaleString('ru-RU').replace(/\s/g,' ')+' ₽';
+      var c=document.getElementById(f[1]);c.style.setProperty('--on',q.toFixed(3));c.style.setProperty('--ring',(q>0&&t<f[2]+.15?1:0));});
+    rev.textContent=Math.round(16200*e((t-.35)/.12)).toLocaleString('ru-RU').replace(/\s/g,' ')+' ₽';
   }
-  addEventListener('scroll',u,{passive:true});addEventListener('resize',function(){fit();u();});
-  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);fit();u();
+  function play(now){if(!t0)t0=now;var t=Math.min(1,(now-t0)/DUR);u(t);if(t<1)requestAnimationFrame(play);}
+  function start(){if(done)return;done=true;if(reduce){u(1);return;}requestAnimationFrame(play);}
+  addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);fit();
+  if(reduce||!('IntersectionObserver' in window)){u(1);done=true;}
+  else{u(0);var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){start();io.disconnect();}},{threshold:.35});io.observe(duo);}
 })();
 
 /* aurora in the top bar: soft waves that follow the cursor, drift with scroll on touch screens */

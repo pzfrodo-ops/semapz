@@ -113,7 +113,7 @@ h1,h2,.ticks b,.final h2{font-family:var(--display);font-weight:700;letter-spaci
 .statement .but b{color:#fff}
 
 /* scroll scene: notebook -> phone app */
-.scene{height:280vh;position:relative}
+.scene{height:220vh;position:relative}
 .stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;padding-top:88px}
 .stage h3{font-size:clamp(20px,2.3vw,30px);font-weight:700;letter-spacing:-.02em;text-align:center;width:90vw;max-width:26ch;margin:0 auto}
 .duo{position:relative;display:flex;align-items:center;justify-content:center;gap:72px;margin-top:3vh}
@@ -211,25 +211,17 @@ h1,h2,.ticks b,.final h2{font-family:var(--display);font-weight:700;letter-spaci
 .m-photo .m-badge{z-index:3}
 
 .m-ads{display:flex;align-items:center;gap:26px}
-.m-bb{position:relative;width:340px;height:178px;border-radius:4px;background:linear-gradient(115deg,#ff5a0a,#ff7a1e 55%,#ff9b40);box-shadow:0 0 0 7px #161618,0 30px 60px rgba(0,0,0,.6);padding:14px 16px;color:#111;transform:perspective(900px) rotateY(12deg);overflow:visible}
-.m-bb .lgx{display:flex;align-items:center;gap:7px;font-weight:800;font-size:12.5px}
-.m-bb .lgx i{width:24px;height:24px;border-radius:7px;background:#111;display:grid;place-items:center}
-.m-bb b{display:block;font-size:24px;line-height:1;font-weight:900;letter-spacing:-.03em;margin-top:10px;max-width:200px}
-.m-bb .pr{display:inline-block;margin-top:9px;background:#111;color:#fff;font-weight:800;font-size:13px;padding:5px 10px;border-radius:7px}
-.m-bb .ad{position:absolute;left:0;right:0;bottom:0;height:20px;line-height:20px;padding-left:16px;background:#111;color:#fff;font-size:9.5px;font-weight:700}
-.m-bb .cn{position:absolute;right:14px;bottom:22px;filter:drop-shadow(0 10px 10px rgba(0,0,0,.35))}
-.m-bb::after{content:"";position:absolute;left:44px;bottom:-90px;width:10px;height:83px;background:#2b2b30;box-shadow:220px 0 0 #2b2b30}
 .m-mp{width:184px;background:#fff;color:#1d1d1f;border-radius:16px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5)}
 .m-mp .ph{height:156px;background:#fff;position:relative;border-bottom:1px solid #f0f0f3}
 .m-mp .ph svg{position:absolute;left:4px;top:22px}
-.m-mp .sale{position:absolute;left:8px;top:8px;background:#ff2d55;color:#fff;font-size:10.5px;font-weight:800;padding:3px 7px;border-radius:6px}
+.m-mp .sale{position:absolute;left:8px;top:8px;background:linear-gradient(180deg,#F8DA96,#E9B355);color:#1a1200;font-size:10.5px;font-weight:800;padding:3px 7px;border-radius:6px}
 .m-mp .ig{position:absolute;right:7px;top:26px;display:flex;flex-direction:column;gap:5px;align-items:flex-end}
-.m-mp .ig span{background:#17181b;color:#fff;font-size:9px;font-weight:700;padding:3px 6px;border-radius:5px;white-space:nowrap}
-.m-mp .ig span:first-child{background:#FF6A13}
+.m-mp .ig span{background:#1E3A8A;color:#fff;font-size:9px;font-weight:700;padding:3px 6px;border-radius:5px;white-space:nowrap}
+.m-mp .ig span:first-child{background:linear-gradient(180deg,#F8DA96,#E9B355);color:#1a1200}
 .m-mp .vol{position:absolute;right:9px;bottom:8px;font-size:19px;font-weight:900;letter-spacing:-.02em}
 .m-mp .p{padding:8px 10px 0;font-size:17px;font-weight:800}
 .m-mp .t{padding:2px 10px 0;font-size:11.5px;font-weight:500;line-height:1.25;color:#3a3a3c}
-.m-mp .bt{margin:7px 10px 10px;background:#17181b;color:#fff;text-align:center;border-radius:9px;padding:7px;font-weight:700;font-size:12px}
+.m-mp .bt{margin:7px 10px 10px;background:#1E3A8A;color:#fff;text-align:center;border-radius:9px;padding:7px;font-weight:700;font-size:12px}
 /* task picker (pattern: "help me choose" schemes on product sites) */
 .pick{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:36px}
 .pick .q{font-weight:700;font-size:17px;margin-right:6px}
@@ -529,7 +521,7 @@ body.ck-open .mbar{display:none}
   .form{padding:24px 20px}
   .sec-title{font-size:25px}
   .statement h2{font-size:24px}
-  .scene{height:240vh}
+  .scene{height:200vh}
   .stage{padding-top:76px}
   .duo{display:block;width:340px;height:484px;margin-top:34px}
   .nb2{width:340px;height:330px}
@@ -600,21 +592,21 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .buy b small{display:block;font-size:13px;font-weight:500;letter-spacing:0;color:#6e6e73;margin-top:3px;line-height:1.25}
 @media (max-width:680px){.fade{height:140px}.m-ads{zoom:.74;gap:18px}}
 @media (min-width:681px){.stage{-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}}
-.m-feed{width:206px;padding:7px;border-radius:30px;background:#111317;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 30px 60px rgba(0,0,0,.55);transform:rotate(-3deg)}
-.m-feed .scr{background:#fff;color:#1d1d1f;border-radius:24px;padding:12px 10px 10px;font-family:var(--font)}
-.m-feed .fh{display:flex;align-items:center;gap:7px}
-.m-feed .fh i{width:26px;height:26px;border-radius:50%;background:#111;display:grid;place-items:center;flex:none}
-.m-feed .fh b{display:block;font-size:11px;font-weight:700;line-height:1.1}
-.m-feed .fh span{display:block;font-size:9px;color:#8e8e93}
-.m-feed .fh em{margin-left:auto;font-style:normal;color:#8e8e93;font-size:12px}
-.m-feed .ft{font-size:9.5px;line-height:1.3;margin:7px 0 6px;color:#3a3a3c}
-.m-feed .fi{position:relative;height:104px;border-radius:12px;background:linear-gradient(120deg,#ff5a0a,#ff8a2e);overflow:hidden;padding:10px}
-.m-feed .fi b{display:block;color:#111;font-size:15px;line-height:1.02;font-weight:800;letter-spacing:-.02em}
-.m-feed .fi .pr{display:inline-block;margin-top:7px;background:#111;color:#fff;font-weight:700;font-size:10px;padding:3px 7px;border-radius:6px}
-.m-feed .fi .cn{position:absolute;right:6px;bottom:4px;filter:drop-shadow(0 8px 8px rgba(0,0,0,.3))}
-.m-feed .fl{display:flex;align-items:center;justify-content:space-between;margin-top:7px;font-size:9.5px;color:#3a3a3c}
-.m-feed .fl .go{background:#1E3A8A;color:#fff;font-weight:700;padding:5px 10px;border-radius:8px}
-.m-feed .fr{display:flex;gap:12px;margin-top:8px;padding-top:7px;border-top:1px solid #efeff2;font-size:9.5px;color:#6e6e73}
+.m-adph{width:206px;padding:7px;border-radius:30px;background:#0A0F1F;box-shadow:0 0 0 1px rgba(242,196,109,.35),0 30px 60px rgba(0,0,0,.55);transform:rotate(-3deg)}
+.m-adph .scr{background:#fff;color:#1d1d1f;border-radius:24px;padding:12px 10px 10px;font-family:var(--font)}
+.m-adph .fh{display:flex;align-items:center;gap:7px}
+.m-adph .fh i{width:26px;height:26px;border-radius:50%;background:#0A0F1F;display:grid;place-items:center;flex:none}
+.m-adph .fh b{display:block;font-size:11px;font-weight:700;line-height:1.1}
+.m-adph .fh span{display:block;font-size:9px;color:#8e8e93}
+.m-adph .fh em{margin-left:auto;font-style:normal;color:#8e8e93;font-size:12px}
+.m-adph .ft{font-size:9.5px;line-height:1.3;margin:7px 0 6px;color:#3a3a3c}
+.m-adph .fi{position:relative;height:104px;border-radius:12px;background:radial-gradient(130% 120% at 15% 0%,#2a4aa8 0%,#1E3A8A 40%,#0A0F1F 100%);overflow:hidden;padding:10px}
+.m-adph .fi b{display:block;color:#F8DA96;font-size:15px;line-height:1.02;font-weight:800;letter-spacing:-.02em}
+.m-adph .fi .pr{display:inline-block;margin-top:7px;background:linear-gradient(180deg,#F8DA96,#E9B355);color:#1a1200;font-weight:700;font-size:10px;padding:3px 7px;border-radius:6px}
+.m-adph .fi .cn{position:absolute;right:6px;bottom:4px;filter:drop-shadow(0 8px 8px rgba(0,0,0,.3))}
+.m-adph .fl{display:flex;align-items:center;justify-content:space-between;margin-top:7px;font-size:9.5px;color:#3a3a3c}
+.m-adph .fl .go{background:linear-gradient(180deg,#F8DA96,#E9B355);color:#1a1200;font-weight:700;padding:5px 10px;border-radius:8px}
+.m-adph .fr{display:flex;gap:12px;margin-top:8px;padding-top:7px;border-top:1px solid #efeff2;font-size:9.5px;color:#6e6e73}
 
 /* v13: выбор почты вместо голой ссылки mailto */
 .mailpick{width:min(440px,calc(100vw - 32px));border:1px solid rgba(242,196,109,.4);border-radius:26px;padding:28px 24px 24px;background:#121a33;color:#eef1f8;box-shadow:0 30px 80px rgba(0,0,0,.6)}
@@ -642,6 +634,13 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .mini .prod.wide{grid-column:1/-1}
 @media (min-width:1061px){.order-grid .side{position:sticky;top:92px}}
 @media (max-width:640px){.form.yaf{padding:22px 6px 14px}.form.yaf h3,.form.yaf .hint{padding:0 14px}}
+/* v15: северное сияние в шапке за курсором */
+.aurora{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;opacity:.6;-webkit-mask-image:linear-gradient(to bottom,#000 30%,transparent 100%);mask-image:linear-gradient(to bottom,#000 30%,transparent 100%)}
+.nav .wrap{position:relative;z-index:1}
+.aurora i{position:absolute;left:0;top:-58px;width:560px;height:116px;margin-left:-280px;border-radius:50%;filter:blur(20px);mix-blend-mode:screen;will-change:transform;-webkit-mask-image:repeating-linear-gradient(90deg,#000 0,rgba(0,0,0,.72) var(--rp),#000 calc(var(--rp)*2));mask-image:repeating-linear-gradient(90deg,#000 0,rgba(0,0,0,.72) var(--rp),#000 calc(var(--rp)*2));--rp:15px}
+.aurora i:nth-child(1){background:radial-gradient(closest-side,rgba(80,226,176,.85),rgba(80,226,176,0))}
+.aurora i:nth-child(2){--rp:21px;width:420px;margin-left:-210px;top:-50px;background:radial-gradient(closest-side,rgba(126,151,214,.9),rgba(126,151,214,0))}
+.aurora i:nth-child(3){--rp:11px;width:300px;margin-left:-150px;top:-60px;background:radial-gradient(closest-side,rgba(242,196,109,.75),rgba(242,196,109,0))}
 </style>
 </head>
 <body>
@@ -649,18 +648,18 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
   <linearGradient id="glx" x1="0" x2="1"><stop offset="0" stop-color="#F2C46D"/><stop offset=".5" stop-color="#7E97D6"/><stop offset="1" stop-color="#FFE7B0"/></linearGradient>
   <symbol id="lgo" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="url(#glx)" stroke-width="3.5"/><path d="M13 27V13l14 14V13" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <linearGradient id="cbf" x1="0" x2="1"><stop offset="0" stop-color="#08080a"/><stop offset=".07" stop-color="#26272c"/><stop offset=".2" stop-color="#4d4f56"/><stop offset=".33" stop-color="#2b2c31"/><stop offset=".78" stop-color="#1a1b1f"/><stop offset="1" stop-color="#2a2b30"/></linearGradient>
+  <linearGradient id="cbf" x1="0" x2="1"><stop offset="0" stop-color="#050916"/><stop offset=".07" stop-color="#17255a"/><stop offset=".2" stop-color="#34489a"/><stop offset=".33" stop-color="#1b2a66"/><stop offset=".78" stop-color="#0f1838"/><stop offset="1" stop-color="#1c2a5e"/></linearGradient>
   <linearGradient id="cbs" x1="0" x2="1" y1="0" y2=".2"><stop offset="0" stop-color="#16171a"/><stop offset=".5" stop-color="#0e0f11"/><stop offset="1" stop-color="#060607"/></linearGradient>
   <linearGradient id="cbv" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".12"/><stop offset=".22" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".4"/></linearGradient>
   <linearGradient id="labsh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset=".12" stop-color="#000" stop-opacity="0"/><stop offset=".7" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></linearGradient>
-  <linearGradient id="capg" x1="0" x2="1"><stop offset="0" stop-color="#9c3a04"/><stop offset=".28" stop-color="#ff7a14"/><stop offset=".48" stop-color="#ffb070"/><stop offset=".72" stop-color="#ff6a0a"/><stop offset="1" stop-color="#7a2c03"/></linearGradient>
+  <linearGradient id="capg" x1="0" x2="1"><stop offset="0" stop-color="#7a5110"/><stop offset=".28" stop-color="#E9B355"/><stop offset=".48" stop-color="#FBE3A8"/><stop offset=".72" stop-color="#D9A040"/><stop offset="1" stop-color="#5e3e0c"/></linearGradient>
   <linearGradient id="oil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf5a" stop-opacity=".8"/><stop offset="1" stop-color="#c47a12" stop-opacity=".9"/></linearGradient>
   <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.6"/></filter>
   <filter id="shd" x="-50%" y="-200%" width="200%" height="500%"><feGaussianBlur stdDeviation="5"/></filter>
   <symbol id="nk" viewBox="0 0 40 40">
-    <circle cx="20" cy="21" r="15.5" fill="none" stroke="#FF6A13" stroke-width="3.2"/>
-    <path d="M20 1.5l4.2 7h-8.4z" fill="#FF6A13"/>
-    <path d="M35.5 21h-3M20 36.5v-3M4.5 21h3" stroke="#FF6A13" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="20" cy="21" r="15.5" fill="none" stroke="#E9B355" stroke-width="3.2"/>
+    <path d="M20 1.5l4.2 7h-8.4z" fill="#E9B355"/>
+    <path d="M35.5 21h-3M20 36.5v-3M4.5 21h3" stroke="#E9B355" stroke-width="2.4" stroke-linecap="round"/>
     <path d="M14.5 27.5v-13l11 13v-13" fill="none" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
   <symbol id="can" viewBox="0 0 240 336">
@@ -676,8 +675,8 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     <path d="M30 100 C30 90 34 85 42 84" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="2" filter="url(#soft)"/>
     <!-- cap on a short neck at the front -->
     <rect x="46" y="27" width="44" height="31" rx="4" fill="url(#capg)"/>
-    <ellipse cx="68" cy="27.5" rx="22" ry="5" fill="#ffb070"/>
-    <ellipse cx="68" cy="27.5" rx="15" ry="3" fill="#ff8a2a"/>
+    <ellipse cx="68" cy="27.5" rx="22" ry="5" fill="#FBE3A8"/>
+    <ellipse cx="68" cy="27.5" rx="15" ry="3" fill="#E9B355"/>
     <g stroke="#000" stroke-opacity=".22" stroke-width="1.3"><path d="M52 32v24M57.5 33v24M63 33v24M68.5 33v24M74 33v24M79.5 33v24M85 32v24"/></g>
     <rect x="44" y="54" width="48" height="5" rx="2" fill="#111214"/>
     <!-- label -->
@@ -686,8 +685,8 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
     <text x="70" y="127" font-family="Inter Tight,Inter,Arial,sans-serif" font-size="9.6" font-weight="800" fill="#17181b" letter-spacing=".4">СЕВЕРНЫЙ</text>
     <text x="70" y="138" font-family="Inter Tight,Inter,Arial,sans-serif" font-size="9.6" font-weight="800" fill="#17181b" letter-spacing=".4">КЛЮЧ</text>
     <text x="101" y="190" text-anchor="middle" font-family="Inter Tight,Inter,Arial,sans-serif" font-size="33" font-weight="900" fill="#17181b" letter-spacing="-1">5W-30</text>
-    <rect x="38" y="204" width="126" height="28" fill="#FF6A13"/>
-    <text x="101" y="223" text-anchor="middle" font-family="Inter Tight,Inter,Arial,sans-serif" font-size="11.5" font-weight="800" fill="#fff" letter-spacing="2.2">СИНТЕТИКА</text>
+    <rect x="38" y="204" width="126" height="28" fill="#1E3A8A"/>
+    <text x="101" y="223" text-anchor="middle" font-family="Inter Tight,Inter,Arial,sans-serif" font-size="11.5" font-weight="800" fill="#F8DA96" letter-spacing="2.2">СИНТЕТИКА</text>
     <text x="101" y="252" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="9.6" font-weight="600" fill="#5a5a60">Моторное масло</text>
     <text x="101" y="264" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="8" font-weight="600" fill="#8e8e93">API SP · ACEA C3</text>
     <text x="101" y="283" text-anchor="middle" font-family="Inter Tight,Inter,Arial,sans-serif" font-size="15" font-weight="900" fill="#17181b">4 л</text>
@@ -701,6 +700,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 </defs></svg>
 
 <header class="nav">
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
   <div class="wrap">
     <a class="brand" href="#top"><i aria-hidden="true"></i>SEMA AI</a>
     <nav class="links" aria-label="Разделы">
@@ -898,7 +898,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
         <article data-k="mp" class="prod w2 rv">
           <div class="vis dk" style="background:radial-gradient(120% 120% at 30% 0%,#1E3A8A 0%,#0f1733 45%,#0A0F1F 100%)">
             <div class="m-ads" aria-hidden="true">
-              <div class="m-feed"><div class="scr">
+              <div class="m-adph"><div class="scr">
                 <div class="fh"><i><svg width="16" height="16" viewBox="0 0 40 40" color="#fff"><use href="#nk"/></svg></i><div><b>Северный ключ</b><span>Реклама</span></div><em>···</em></div>
                 <div class="ft">Масло поменяем за 30 минут, пока вы пьёте кофе</div>
                 <div class="fi"><div class="txt"><b>Замена масла<br>за 30 минут</b><span class="pr">от 1 900 ₽</span></div><svg class="cn" width="62" height="87" viewBox="0 0 240 336"><use href="#can"/></svg></div>
@@ -1246,21 +1246,39 @@ var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var sc=document.getElementById('scene'),duo=document.getElementById('duo'),ph=document.getElementById('ph2'),
       st=sc.querySelector('.stage'),hd=st.querySelector('h3'),
       rev=document.getElementById('acRev'),mobile=matchMedia('(max-width:680px)');
-  var feed=[['mk1','ac1',.30],['mk2','ac2',.44],['mk3','ac3',.58]];
+  var feed=[['mk1','ac1',.20],['mk2','ac2',.42],['mk3','ac3',.64]];
   function fit(){duo.style.zoom=1;var r=duo.getBoundingClientRect(),cap=0;
     var room=innerHeight-st.offsetTop-parseFloat(getComputedStyle(st).paddingTop)-hd.offsetHeight-cap-innerHeight*(mobile.matches?.05:.035)-(mobile.matches?34:6);
     var k=Math.min(mobile.matches?1:1.6,room/(r.height*(mobile.matches?1:.89)),(innerWidth*.94)/r.width);duo.style.zoom=Math.max(.45,k).toFixed(3);}
   function e(x){x=Math.min(1,Math.max(0,x));return x*x*(3-2*x);}
   var tMax=0;
   function u(){var r=sc.getBoundingClientRect(),tot=r.height-innerHeight,t=reduce?1:Math.min(1,Math.max(0,-r.top/tot));tMax=Math.max(tMax,t);t=tMax;
-    var a=e((t-.1)/.16);ph.style.setProperty('--po',a.toFixed(3));ph.style.setProperty('--py',((1-a)*60).toFixed(1)+'px');
-    feed.forEach(function(f){var k=e((t-f[2])/.08),q=e((t-f[2]-.05)/.08);
+    var a=e(t/.16);ph.style.setProperty('--po',a.toFixed(3));ph.style.setProperty('--py',((1-a)*60).toFixed(1)+'px');
+    feed.forEach(function(f){var k=e((t-f[2])/.1),q=e((t-f[2]-.05)/.1);
       document.querySelector('#'+f[0]+' .mk').style.setProperty('--k',k.toFixed(3));
-      var c=document.getElementById(f[1]);c.style.setProperty('--on',q.toFixed(3));c.style.setProperty('--ring',(q>0&&t<f[2]+.2?1:0));});
-    rev.textContent=Math.round(16200*e((t-.33)/.1)).toLocaleString('ru-RU').replace(/\s/g,' ')+' ₽';
+      var c=document.getElementById(f[1]);c.style.setProperty('--on',q.toFixed(3));c.style.setProperty('--ring',(q>0&&t<f[2]+.18?1:0));});
+    rev.textContent=Math.round(16200*e((t-.25)/.12)).toLocaleString('ru-RU').replace(/\s/g,' ')+' ₽';
   }
   addEventListener('scroll',u,{passive:true});addEventListener('resize',function(){fit();u();});
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);fit();u();
+})();
+
+/* aurora in the top bar: follows the cursor, drifts with scroll on touch screens */
+(function(){
+  var au=document.querySelector('.aurora');if(!au)return;
+  var bl=[].slice.call(au.children),sp=[.085,.05,.032],off=[0,-120,140],w=innerWidth,x=[w*.5,w*.5,w*.5],tx=w*.5,near=0,nt=0,run=true,t0=performance.now();
+  if(reduce){bl.forEach(function(b,i){b.style.transform='translate3d('+Math.round(w*(.3+.2*i))+'px,0,0)';});return;}
+  var touch=matchMedia('(hover:none)').matches;
+  addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;tx=e.clientX;nt=e.clientY<170?1:0;},{passive:true});
+  document.documentElement.addEventListener('mouseleave',function(){nt=0;});
+  if(touch)addEventListener('scroll',function(){var m=document.documentElement.scrollHeight-innerHeight;tx=innerWidth*(.15+.7*(m>0?scrollY/m:0));},{passive:true});
+  function f(now){var t=(now-t0)/1000;
+    for(var i=0;i<3;i++){var g=tx+off[i]+Math.sin(t*(.45+i*.16)+i*2.1)*46;x[i]+=(g-x[i])*sp[i];
+      bl[i].style.transform='translate3d('+x[i].toFixed(1)+'px,0,0) scaleX('+(1+.14*Math.sin(t*.6+i*1.7)).toFixed(3)+')';}
+    near+=(nt-near)*.06;au.style.opacity=(.6+.4*near).toFixed(3);
+    if(run)requestAnimationFrame(f);}
+  document.addEventListener('visibilitychange',function(){var v=!document.hidden;if(v&&!run){run=true;requestAnimationFrame(f);}run=v;});
+  requestAnimationFrame(f);
 })();
 
 /* task picker: dims the services that don't fit the chosen situation */

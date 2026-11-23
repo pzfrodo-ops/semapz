@@ -1301,7 +1301,7 @@ document.querySelectorAll('.lede-link').forEach(function(a){a.addEventListener('
     });
   });
   /* the form reports its height only on resize, so nudge it after load */
-  function nudge(){if(!fr)return;fr.style.width='99.8%';setTimeout(function(){fr.style.width='';},150);}
+  function nudge(){if(!fr)return;fr.style.width='calc(100% - 2px)';setTimeout(function(){fr.style.width='';},200);}
   if(fr){fr.addEventListener('load',function(){setTimeout(nudge,500);setTimeout(nudge,2000);});setTimeout(nudge,1500);}
   var sent=false;
   window.addEventListener('message',function(e){

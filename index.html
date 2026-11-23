@@ -636,7 +636,7 @@ h1,h2,.ticks b,.final h2{font-weight:600;letter-spacing:-.025em}
 .form.yaf{padding:30px 20px 18px}
 .form.yaf h3,.form.yaf .hint{padding:0 12px}
 .yaf-box{margin-top:12px;background:#fff;border-radius:18px;overflow:hidden}
-.yaf-box iframe{display:block;width:100%;height:1700px;border:0;background:#fff}
+.yaf-box iframe{display:block;width:100%;height:2000px;border:0;background:#fff}
 .yaf-alt{margin:10px 12px 0;font-size:14px;color:#6e6e73}
 .yaf-alt a{color:#1E3A8A;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .mini .prod.wide{grid-column:1/-1}
@@ -1300,6 +1300,9 @@ document.querySelectorAll('.lede-link').forEach(function(a){a.addEventListener('
       document.getElementById('order').scrollIntoView({behavior:reduce?'auto':'smooth'});
     });
   });
+  /* the form reports its height only on resize, so nudge it after load */
+  function nudge(){if(!fr)return;fr.style.width='99.8%';setTimeout(function(){fr.style.width='';},150);}
+  if(fr){fr.addEventListener('load',function(){setTimeout(nudge,500);setTimeout(nudge,2000);});setTimeout(nudge,1500);}
   var sent=false;
   window.addEventListener('message',function(e){
     if(!fr||e.source!==fr.contentWindow||!/^https:\/\/forms\.yandex\.ru$/.test(e.origin))return;
